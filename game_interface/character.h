@@ -25,7 +25,7 @@ public:
 
 	void Update() override
 	{
-		if (m_game_window.frame_number % 5 == 0)
+		if (m_game_window.m_frame_number % 5 == 0)
 		{
 			m_base_texture = m_idle_textures[(m_animation_counter++) % m_idle_textures.size()];
 			dest_rect.x += m_direction.x;

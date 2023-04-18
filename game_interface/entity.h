@@ -1,7 +1,7 @@
 #pragma once
 #include "game_common.h"
 class GameWindow;
-
+class Vector2;
 class Entity
 {
 public:
@@ -27,6 +27,7 @@ public:
 
 	void UpdateDestRectFromDim();
 
+	void LoadTextures();
 
 	void SetRenderer(SDL_Renderer* renderer);
 
@@ -37,9 +38,12 @@ protected:
 	SDL_Renderer* m_renderer = nullptr;
 	SDL_Rect src_rect;
 	SDL_Rect dest_rect;
-	SDL_Texture* m_texture;
-	Vector2<int> m_direction;
+	SDL_Texture* m_base_texture;
+	Vector2 m_direction;
+	std::vector<SDL_Texture*> m_idle_textures;
+	std::vector<SDL_Texture*> m_moving_textures;
 	float m_velocity;
+	size_t m_animation_counter{0};
 	
 
 };

@@ -10,6 +10,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simple_game", "simple_game\
 		{7EC0EFFC-0C73-42BB-AD8D-0933343E3476} = {7EC0EFFC-0C73-42BB-AD8D-0933343E3476}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors", "Vectors\Vectors.vcxproj", "{D8827100-805C-4227-A4D1-55BBBB7DFDCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -34,6 +36,14 @@ Global
 		{F063E76F-47D2-4118-82AF-1F9143F4C4BE}.Release|x64.Build.0 = Release|x64
 		{F063E76F-47D2-4118-82AF-1F9143F4C4BE}.Release|x86.ActiveCfg = Release|Win32
 		{F063E76F-47D2-4118-82AF-1F9143F4C4BE}.Release|x86.Build.0 = Release|Win32
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Debug|x64.ActiveCfg = Debug|x64
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Debug|x64.Build.0 = Debug|x64
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Debug|x86.ActiveCfg = Debug|Win32
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Debug|x86.Build.0 = Debug|Win32
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Release|x64.ActiveCfg = Release|x64
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Release|x64.Build.0 = Release|x64
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Release|x86.ActiveCfg = Release|Win32
+		{D8827100-805C-4227-A4D1-55BBBB7DFDCA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

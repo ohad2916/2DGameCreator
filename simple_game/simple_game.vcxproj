@@ -71,20 +71,20 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>S:\CppProjects\SDLTraining\game_interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;$(IncludePath)</IncludePath>
+    <LibraryPath>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>S:\CppProjects\SDLTraining\game_interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;$(IncludePath)</IncludePath>
+    <LibraryPath>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>S:\CppProjects\SDLTraining\game_interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;$(IncludePath)</IncludePath>
+    <LibraryPath>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>S:\CppProjects\SDLTraining\game_interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;$(IncludePath)</IncludePath>
+    <LibraryPath>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -93,12 +93,13 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;Vectors.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\x64\Debug;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -113,14 +114,15 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;Vectors.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\x64\Debug;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -133,12 +135,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;Vectors.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\x64\Debug;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -153,14 +156,15 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\game_interface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>S:\CppProjects\SDLTraining\sdk\Interface;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;game_interface.lib;Vectors.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\x64\Debug;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\lib\x64;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
@@ -172,6 +176,9 @@
   <ItemGroup>
     <ProjectReference Include="..\game_interface\game_interface.vcxproj">
       <Project>{7ec0effc-0c73-42bb-ad8d-0933343e3476}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vectors\Vectors.vcxproj">
+      <Project>{d8827100-805c-4227-a4d1-55bbbb7dfdca}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

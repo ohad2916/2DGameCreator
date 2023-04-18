@@ -16,7 +16,7 @@ public:
 	void Init(bool fullscreen_flag);
 	
 
-	void AddEntity(Entity&& entity);
+	void AddEntity(std::shared_ptr<Entity>& entity);
 
 	void HandleEvents();
 
@@ -26,7 +26,7 @@ public:
 
 	void Run();
 
-	void SetMap(Map* map);
+	void SetMap(std::shared_ptr<Map>& map);
 
 	void Clean();
 
@@ -34,9 +34,9 @@ public:
 
 	SDL_Renderer* GetRenderer();
 
-	virtual void HandleKeyDown();
+	virtual void HandleKeyDown(SDL_Event& event);
 
-	virtual void HandleKeyUp();
+	virtual void HandleKeyUp(SDL_Event& event);
 
 	SDL_Texture* GetTexture(const std::string& name);
 
@@ -44,17 +44,17 @@ public:
 
 	dimensions m_dimensions;
 	uint64_t m_frame_number;
+	std::string m_asset_path;
 
 protected:
-	std::string m_asset_path;
 	std::string m_title = "A game Window";
 	SDL_Window* m_window = nullptr;
 	SDL_Renderer* m_renderer = nullptr;
 	bool m_isRunning = false;
 	uint16_t m_max_fps = 144;
-	std::vector<Entity> m_entities;
+	std::vector<std::shared_ptr<Entity>> m_entities;
 	std::unordered_map<std::string, SDL_Texture*> m_textures;
-	Map* m_map;
+	std::shared_ptr<Map> m_map;
 	std::shared_ptr<Entity> m_main_entity;
 
 };

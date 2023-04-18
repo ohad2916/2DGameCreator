@@ -44,20 +44,12 @@ int main()
 	};
 
 	ex_game.Init(false);
-	Map map(ex_map,ex_game, 25, 20);
-	ex_game.SetMap(&map);
+	std::shared_ptr<Map> map(new Map(ex_map,ex_game, 25, 20));
+	ex_game.SetMap(map);
 
-	Entity zombie{ ex_game,{0,0,64,64},"zombie"};
-	Entity zombie2{ ex_game,{80,80,64,64},"zombie"};
-	Entity blank{ ex_game,{200,200,100,100},"sadas" };
-
-	zombie.UpdateSrcRect({0, 0, 847, 604});
-	zombie2.UpdateSrcRect({0, 0, 847, 604});
-	blank.UpdateSrcRect({ 0,0,500,500});
-	ex_game.AddEntity(std::move(zombie));
-	ex_game.AddEntity(std::move(zombie2));
-	
-	ex_game.AddEntity(std::move(blank));
+	std::shared_ptr<Entity> jenny(new Entity(ex_game, { 300,300,200,200 }, "jenny"));
+	jenny->UpdateSrcRect({ 0,0,640,640 });
+	ex_game.AddEntity(jenny);
 	
 
 	ex_game.Run();

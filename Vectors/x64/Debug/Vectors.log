@@ -1,0 +1,9 @@
+﻿  vec2.cpp
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(73,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(82,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(83,28): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(90,23): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(89,23): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(98,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\Vectors\vec2.cpp(111,13): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Vectors.vcxproj -> S:\CppProjects\2DGameCreator\2DGameCreator\x64\Debug\Vectors.lib

@@ -20,7 +20,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="vec2.cpp" />
     <ClInclude Include="character.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="game_common.h" />
@@ -31,8 +30,12 @@
     <ClInclude Include="map.h" />
     <ClInclude Include="tile.h" />
     <ClCompile Include="tile.cpp" />
-    <ClInclude Include="vec2.h" />
     <ClInclude Include="vec4d.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vectors\Vectors.vcxproj">
+      <Project>{d8827100-805c-4227-a4d1-55bbbb7dfdca}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -89,22 +92,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
     <OutDir>..\sdk\Interface</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
     <OutDir>..\sdk\Interface</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
     <OutDir>..\sdk\Interface</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LibraryPath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\lib\x64;$(LibraryPath)</LibraryPath>
-    <IncludePath>S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>S:\CppProjects\2DGameCreator\2DGameCreator\Vectors;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;$(IncludePath)</IncludePath>
     <OutDir>..\sdk\Interface</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -113,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -134,7 +137,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -155,7 +158,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -176,7 +179,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>S:\CppProjects\SDLTraining\sdk\SDL2_image-2.6.3\include;S:\CppProjects\SDLTraining\sdk\SDL2-2.26.5\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2-2.26.5\include;S:\CppProjects\2DGameCreator\2DGameCreator\sdk\SDL2_image-2.6.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>

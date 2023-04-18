@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>S:\CppProjects\SDLTraining\x64\Debug\simple_game.exe</FullPath>
+      <FullPath>S:\CppProjects\2DGameCreator\2DGameCreator\x64\Debug\simple_game.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

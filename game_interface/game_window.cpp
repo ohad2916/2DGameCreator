@@ -42,9 +42,9 @@ void GameWindow::Init(bool fullscreen_flag)
 	m_isRunning = true;
 }
 
-void GameWindow::AddEntity(Entity&& entity)
+void GameWindow::AddEntity(std::shared_ptr<Entity>& entity)
 {
-	m_entities.emplace_back(std::move(entity));
+	m_entities.push_back(entity);
 }
 
 void GameWindow::HandleEvents()
@@ -58,10 +58,10 @@ void GameWindow::HandleEvents()
 		m_isRunning = false;
 		break;
 	case SDL_KEYDOWN:
-		HandleKeyDown();
+		HandleKeyDown(event);
 		break;
 	case SDL_KEYUP:
-		HandleKeyUp();
+		HandleKeyUp(event);
 		break;
 	default:
 		break;
@@ -73,7 +73,7 @@ void GameWindow::Update()
 {
 	for (auto& entity : m_entities)
 	{
-		entity.Update();
+		entity->Update();
 	}
 }
 
@@ -83,7 +83,7 @@ void GameWindow::Render()
 	m_map->Render();
 	for (auto& entity: m_entities)
 	{
-		entity.Render();
+		entity->Render();
 	}
 	SDL_RenderPresent(m_renderer);
 
@@ -96,7 +96,7 @@ void GameWindow::Run()
 
 	while (IsRunning())
 	{
-		if (++m_frame_number % 60 == 0)
+		if (++m_frame_number % 200 == 0)
 			std::cout << "Frame number:" << m_frame_number << std::endl;
 		uint32_t frame_start = SDL_GetTicks();
 
@@ -114,7 +114,7 @@ void GameWindow::Run()
 	}
 }
 
-void GameWindow::SetMap(Map* map)
+void GameWindow::SetMap(std::shared_ptr<Map>& map)
 {
 	m_map = map;
 }
@@ -138,12 +138,22 @@ SDL_Renderer* GameWindow::GetRenderer()
 	return m_renderer;
 }
 
-void GameWindow::HandleKeyDown()
+void GameWindow::HandleKeyDown(SDL_Event& event)
 {
-	
+	switch(event.key.keysym.scancode)
+	{
+	case SDL_SCANCODE_UP:
+		break;
+	case SDL_SCANCODE_DOWN:
+		break;
+	case SDL_SCANCODE_LEFT:
+		break;
+	case SDL_SCANCODE_RIGHT:
+		break;
+	}
 }
 
-void GameWindow::HandleKeyUp()
+void GameWindow::HandleKeyUp(SDL_Event& event)
 {
 	
 }
@@ -158,10 +168,10 @@ SDL_Texture* GameWindow::GetTexture(const std::string& name)
 
 void GameWindow::LoadTextures()
 {
-	for (const auto& entry : std::filesystem::directory_iterator(m_asset_path))
+	for (const auto& entry : std::filesystem::directory_iterator(m_asset_path + "generic/"))
 	{
 		std::string image_path = entry.path().string();
-		std::string image_name = image_path.substr(image_path.find_first_of('/')+1, image_path.find_first_of('.') - image_path.find_first_of('/') - 1);
+		std::string image_name = image_path.substr(image_path.find_last_of('/')+1, image_path.find_last_of('.') - image_path.find_last_of('/') - 1);
 		m_textures[image_name] = IMG_LoadTexture(m_renderer,image_path.c_str());
 
 	}

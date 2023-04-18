@@ -15,14 +15,14 @@ Tile::Tile(GameWindow& game_window) : Entity(game_window)
 WaterTile::WaterTile(GameWindow& game_window) : Tile(game_window)
 {
 	m_name = "WaterTile";
-	m_texture = game_window.GetTexture(m_name);
+	m_base_texture = game_window.GetTexture(m_name);
 }
 
 
 DirtTile::DirtTile(GameWindow& game_window) : Tile(game_window)
 {
 	m_name = "DirtTile";
-	m_texture = game_window.GetTexture(m_name);
+	m_base_texture = game_window.GetTexture(m_name);
 }
 
 
@@ -30,5 +30,5 @@ DirtTile::DirtTile(GameWindow& game_window) : Tile(game_window)
 GrassTile::GrassTile(GameWindow & game_window) : Tile(game_window)
 {
 	m_name = "GrassTile";
-	m_texture = game_window.GetTexture(m_name);
+	m_base_texture = game_window.GetTexture(m_name);
 }
