@@ -1,3 +1,6 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(503,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   entity.cpp
+S:\CppProjects\2DGameCreator\2DGameCreator\game_interface\entity.cpp(37,27): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\game_interface\entity.cpp(38,27): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+S:\CppProjects\2DGameCreator\2DGameCreator\game_interface\entity.cpp(40,21): warning C4305: '*=': truncation from 'double' to 'float'
   game_interface.vcxproj -> S:\CppProjects\2DGameCreator\2DGameCreator\sdk\Interface\game_interface.lib

@@ -42,6 +42,9 @@ public:
 
 	void LoadTextures();
 
+	void SetMainEntity(const std::shared_ptr<Entity>& entity);
+
+
 	dimensions m_dimensions;
 	uint64_t m_frame_number;
 	std::string m_asset_path;

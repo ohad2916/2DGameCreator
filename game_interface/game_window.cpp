@@ -143,12 +143,16 @@ void GameWindow::HandleKeyDown(SDL_Event& event)
 	switch(event.key.keysym.scancode)
 	{
 	case SDL_SCANCODE_UP:
+		m_main_entity->Move({0,-1});
 		break;
 	case SDL_SCANCODE_DOWN:
+		m_main_entity->Move({0,1});
 		break;
 	case SDL_SCANCODE_LEFT:
+		m_main_entity->Move({ -1,0 });
 		break;
 	case SDL_SCANCODE_RIGHT:
+		m_main_entity->Move({ 1,0 });
 		break;
 	}
 }
@@ -176,4 +180,9 @@ void GameWindow::LoadTextures()
 
 	}
 
+}
+
+void GameWindow::SetMainEntity(const std::shared_ptr<Entity>& entity)
+{
+	m_main_entity = entity;
 }

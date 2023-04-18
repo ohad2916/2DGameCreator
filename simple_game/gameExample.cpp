@@ -50,6 +50,7 @@ int main()
 	std::shared_ptr<Entity> jenny(new Entity(ex_game, { 300,300,200,200 }, "jenny"));
 	jenny->UpdateSrcRect({ 0,0,640,640 });
 	ex_game.AddEntity(jenny);
+	ex_game.SetMainEntity(jenny);
 	
 
 	ex_game.Run();

@@ -21,7 +21,7 @@ public:
 
 	void Reposition(uint32_t x, uint32_t y);
 
-	void Move();
+	void Move(const Vector2& direction);
 
 	void UpdateSrcRect(dimensions dim);
 

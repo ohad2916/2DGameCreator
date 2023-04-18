@@ -33,6 +33,17 @@ void Entity::Update()
 	{
 		m_base_texture = m_idle_textures[m_animation_counter++ % m_idle_textures.size()];
 	}
+
+	m_dim.x += m_direction.x * m_velocity;
+	m_dim.y += m_direction.y * m_velocity;
+
+	m_velocity *= 0.999;
+	if (m_velocity <= 0.1)
+	{
+		m_velocity = 0;
+	}
+
+	UpdateDestRectFromDim();
 }
 
 void Entity::Render()
@@ -46,9 +57,12 @@ void Entity::Reposition(uint32_t x, uint32_t y)
 	dest_rect.y = y;
 }
 
-void Entity::Move()
+void Entity::Move(const Vector2& direction)
 {
-
+	m_velocity += 10;
+	m_velocity = std::min<float>(m_velocity, 4.0);
+	m_direction += direction;
+	m_direction.normalize();
 }
 
 
@@ -59,6 +73,7 @@ void Entity::UpdateSrcRect(dimensions dim)
 	src_rect.h = dim.h;
 	src_rect.w = dim.w;
 }
+
 void Entity::UpdateDestRectFromDim()
 {
 	dest_rect.x = m_dim.x;
