@@ -20,6 +20,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="vec2.cpp" />
+    <ClInclude Include="character.h" />
     <ClInclude Include="entity.h" />
     <ClInclude Include="game_common.h" />
     <ClCompile Include="game_window.cpp" />
@@ -29,6 +31,7 @@
     <ClInclude Include="map.h" />
     <ClInclude Include="tile.h" />
     <ClCompile Include="tile.cpp" />
+    <ClInclude Include="vec2.h" />
     <ClInclude Include="vec4d.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

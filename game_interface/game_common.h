@@ -12,10 +12,12 @@
 #include <unordered_map>
 #include <filesystem>
 #include "vec4d.h"
+#include "vec2.h"
 #include "game_window.h"
 #include "entity.h"
 #include "tile.h"
 #include "map.h"
+#include "character.h"
 
 
 

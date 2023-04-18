@@ -93,11 +93,11 @@ void GameWindow::Run()
 {
 	const float frame_delay = 1000 / m_max_fps;
 
-	int cnt{ 0 };
 
 	while (IsRunning())
 	{
-		std::cout << cnt++;
+		if (++m_frame_number % 60 == 0)
+			std::cout << "Frame number:" << m_frame_number << std::endl;
 		uint32_t frame_start = SDL_GetTicks();
 
 		HandleEvents();
