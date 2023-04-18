@@ -42,8 +42,10 @@ public:
 
 	void LoadTextures();
 
-protected:
 	dimensions m_dimensions;
+	uint64_t m_frame_number;
+
+protected:
 	std::string m_asset_path;
 	std::string m_title = "A game Window";
 	SDL_Window* m_window = nullptr;
@@ -53,5 +55,6 @@ protected:
 	std::vector<Entity> m_entities;
 	std::unordered_map<std::string, SDL_Texture*> m_textures;
 	Map* m_map;
+	std::shared_ptr<Entity> m_main_entity;
 
 };

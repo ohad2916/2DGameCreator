@@ -38,5 +38,8 @@ protected:
 	SDL_Rect src_rect;
 	SDL_Rect dest_rect;
 	SDL_Texture* m_texture;
+	Vector2<int> m_direction;
+	float m_velocity;
+	
 
 };
